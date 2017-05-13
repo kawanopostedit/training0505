@@ -1,3 +1,21 @@
       <%=image_tag 'PET_logo_type-B.png' %>
-      <h1>2017年5月6日、今日のホームページ</h1>
-      <%= link_to 'について', about_path %>
+      <h3>アプリケーション開発トレーニング Day1</h3>
+      
+      <pre>
+
+<% mykey = 'AIzaSyBSr9RMUSWftEsrIMKX4J5qsLXEjnFKoVY' %>
+
+<%= input = 'Where there is a will, there is a way.' %>
+
+<% uri = URI.parse("https://translation.googleapis.com/language/translate/v2?key=#{mykey}&source=en&target=de&q=#{input}") %>
+
+
+<%= str = Net::HTTP.get(uri) %>
+
+
+<%= result = JSON.parse(str) %>
+
+
+      </pre>
+      
+      <%= link_to 'このサービスについて', about_path %>
