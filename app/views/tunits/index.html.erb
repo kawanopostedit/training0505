@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tunits</h1>
+
+<table border="2">
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Target</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tunits.each do |tunit| %>
+      <tr>
+        <td width="400"><%= tunit.source %></td>
+        <td width="400"><%= tunit.target %></td>
+        <td><%= link_to 'Show', tunit %></td>
+        <td><%= link_to 'Edit', edit_tunit_path(tunit) %></td>
+        <td><%= link_to 'Destroy', tunit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tunit', new_tunit_path %>

@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @tunit.source %>
+</p>
+
+<p>
+  <strong>Target:</strong>
+  <%= @tunit.target %>
+</p>
+
+<table border="1">
+  <tr>
+    <td><strong>Source:</strong></td>
+    <td><strong>Target:</strong></td>
+  </tr>
+  <tr>
+    <td><%= @tunit.source %></td>
+    <td><%= @tunit.target %></td>
+  </tr>
+</table>
+
+
+<%= link_to 'Edit', edit_tunit_path(@tunit) %> |
+<%= link_to 'Back', tunits_path %>

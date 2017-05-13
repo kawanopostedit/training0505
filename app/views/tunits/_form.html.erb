@@ -1,0 +1,25 @@
+<%= form_for(@tunit) do |f| %>
+  <% if @tunit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tunit.errors.count, "error") %> prohibited this tunit from being saved:</h2>
+
+      <ul>
+      <% @tunit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :source %><br>
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :target %><br>
+    <%= f.text_field :target %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
